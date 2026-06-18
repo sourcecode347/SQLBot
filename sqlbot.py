@@ -119,7 +119,7 @@ class ModernSQLiSpider:
             if resp.status_code != 200:
                 return
             if "?" in url:
-                self.test_sql_injection(url, resp)
+                self.test_sql_injection(url, resp , pname)
             soup = BeautifulSoup(resp.text, 'html.parser')
             # find links
             links = soup.find_all("a", href=True)
@@ -146,7 +146,7 @@ class ModernSQLiSpider:
             if domain not in open(sqlbotvulnerabilities).read():   
                 f.write(tl+"\n")
             f.close()
-    def test_sql_injection(self, url, original_resp):
+    def test_sql_injection(self, url, original_resp ,pname):
         """Test GET parameters"""
         parsed = urlparse(url)
         if not parsed.query:
@@ -157,7 +157,7 @@ class ModernSQLiSpider:
                 resp = self.session.get(new_url, timeout=10)
                 
                 if any(err in resp.text.lower() for err in ERROR_SIGNS):
-                    print(Fore.GREEN + f"[!] Possible SQLi (error-based) → {new_url}")
+                    print(Fore.GREEN + f"[{pname}] [!] Possible SQLi (error-based) → {new_url}")
                     self.saveurl(url)
             except:
                 pass
