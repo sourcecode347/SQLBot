@@ -7,6 +7,8 @@ To Setup SQLBot Script execute this command :
 
     pip install requirements.txt
 
+Open the sqlbot.py with a text editor and go to the settings sector and setup the SQLMAPAPI_PATH and the other settings if you want to change.
+
 To use the SQLBot Script execute this Command :
 
     python sqlbot.py -t targets.txt -o results.txt -p 16
