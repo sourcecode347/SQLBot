@@ -45,8 +45,8 @@ SQLMAP_API_URL,USERNAME,PASSWORD,SQLMAPAPI_PATH,HOST,PORT
 HOST = "127.0.0.1"
 PORT = "8775"
 SQLMAP_API_URL = f"http://{HOST}:{PORT}"
-USERNAME = "AdminBaz"
-PASSWORD = "SQLMap347Baz"
+USERNAME = "Admin"
+PASSWORD = "SQLMap123"
 SQLMAPAPI_PATH = "D:/0/hack/sqlmap/sqlmapapi.py"
 output="vulnerabilities.txt"
 processes=int(int(mp.cpu_count())/2)
