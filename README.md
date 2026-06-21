@@ -15,6 +15,7 @@ SQLBot Python Script is an Advanced SQL Injection Scanner that accepts targets f
 
 It uses multithreaded technology and is quite fast, if we add too many processes or a very large list of targets, the processor and RAM memory may be overloaded, it is good not to define Processes manually and let it define the Threads of our processor, from lists it is good and fast to load up to 10000 targets at a time, because it loads all targets into memory and distributes them to the processes.
 
-In combination with SiteDB and SQLMap it is a complete package to perform SQLi Attacks.
+SQLBot has been upgraded quite a bit, you set it up with a list of sites, it visits them and there the Spider is activated which Crawls new URLs with Parameters, in each Crawl the Detector runs which has many SQLi Payloads and Error Signs and identifies possible SQLi vulnerabilities and submits them for automatic analysis to SQLMap.
+SQLMap completes the analysis with a maximum time of 25 minutes per URL and if it gains access to the Server databases then it saves the Vulnerable URL in a document.
 
 Have a nice day & Happy Hacking :)
