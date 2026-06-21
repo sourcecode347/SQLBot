@@ -5,7 +5,7 @@ An Advanced SQLi Scanner
 
 To Setup SQLBot Script execute this command :
 
-    pip install requirements.txt
+    pip install -r requirements.txt
 
 Open the sqlbot.py with a text editor and go to the settings sector and setup the SQLMAPAPI_PATH and the other settings if you want to change.
 
